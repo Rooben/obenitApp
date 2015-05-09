@@ -1,7 +1,7 @@
 # obenitApp
-Show case of skills in web technologies.
-This was built using the angular genetor.
-
+Purpose : Show case of skills in web technologies.
+This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
+version 0.11.1.
 
 Setup
 After cloning or downloading, 
