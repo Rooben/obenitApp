@@ -3,7 +3,7 @@ Purpose : Show case of skills in web technologies.
 This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
 version 0.11.1.
 
-Setup
+Setup: /r
 After cloning or downloading, 
 CD into the root directory and then run: 
 
