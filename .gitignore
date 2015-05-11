@@ -16,3 +16,7 @@ plugins
 *.log
 *.DS_Store
 Thumbs.db
+.iws
+workspace.xml
+tasks.xml
+vcs.xml
