@@ -13,16 +13,17 @@ angular.module('rolandApp')
     var webTextArray = ['sites', 'applications', 'browsers', 'development', 'designs', 'servers', 'solutions', 'technologies', 'clients', 'DEVELOPER' ];
 
 
+
+    function runAnimation(animationTarget, duration, properties){
+      TweenLite.to(animationTarget, duration, properties);
+    }
+
     function slideWebTextDown(){
       resetAnimationPos();
       $scope.animationText = webTextArray[count];
-      function runAnimation(animationTarget, duration, properties){
-        TweenLite.to(animationTarget, duration, properties);
-      }
       count++;
       runAnimation('.webtext', 0.5, {top: '197px'});
       runAnimation('.webtext li', 0.5, {fontSize: '2.8em'});
-
       if(count === webTextArray.length){
         $scope.introText = 'I am a :';
       }else{
@@ -33,8 +34,9 @@ angular.module('rolandApp')
     function runTask(){
       $interval(slideWebTextDown, 3000, webTextArray.length);
     }
+
     function resetAnimationPos(){
-      $('.webtext').css('top', '100px');
+      $('.webtext').css('top', '110px');
       $('.webtext').children('li').css('fontSize', '0.2em');
     }
     runTask();
