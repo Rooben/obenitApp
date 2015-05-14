@@ -8,22 +8,16 @@
  * Controller of the rolandApp
  */
 angular.module('rolandApp')
-  .controller('MainCtrl', function ($scope, $interval) {
+  .controller('MainCtrl', function ($scope, $interval, myGsapTo) {
     var count = 0;
     var webTextArray = ['sites', 'applications', 'browsers', 'development', 'designs', 'servers', 'solutions', 'technologies', 'clients', 'DEVELOPER' ];
-
-
-
-    function runAnimation(animationTarget, duration, properties){
-      TweenLite.to(animationTarget, duration, properties);
-    }
 
     function slideWebTextDown(){
       resetAnimationPos();
       $scope.animationText = webTextArray[count];
       count++;
-      runAnimation('.webtext', 0.5, {top: '197px'});
-      runAnimation('.webtext li', 0.5, {fontSize: '2.8em'});
+      myGsapTo.runAnimation('.webtext', 0.5, {top: '197px',  ease: Sine.easeOut});
+      myGsapTo.runAnimation('.webtext li', 0.5, {fontSize: '2.8em'});
       if(count === webTextArray.length){
         $scope.introText = 'I am a :';
       }else{
@@ -50,6 +44,14 @@ angular.module('rolandApp')
           elm.children('li').removeClass('active');
           $(this).addClass('active');
         });
+      }
+    };
+  })
+
+  .factory('myGsapTo', function(){
+    return{
+      runAnimation: function(animationTarget, duration, properties){
+        TweenLite.to(animationTarget, duration, properties);
       }
     };
   });

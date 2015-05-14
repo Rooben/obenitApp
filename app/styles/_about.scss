@@ -1,16 +1,4 @@
-//.aboutContainer{
-//  position: relative;
-//  padding: 10px;
-//  .dir_image{
-//    position: absolute;
-//    width: 750px;
-//  }
-//  .dir_pole{
-//    position: absolute;
-//    left: 339px;
-//    top: 95px;
-//  }
-//}
+
 .about-styles {
   .caroselDirection {
     width: 80px;
@@ -28,15 +16,18 @@
     position: relative;
     width: 580px;
     margin: 0 auto;
+    overflow: hidden;
     .aboutMeText{
       position: absolute;
+      font-family: 'Josefin Slab', serif;
       color: #ffffff;
-      font-size: 2em;
+      font-size: 1.7em;
       font-style: italic;
-      width: 87%;
       font-weight: bold;
+      width: 80%;
       top: 100px;
-      left: 60px;
+      left: 50px;
+      text-shadow: 1px 1px #444444;
     }
     .carousel-caption{
       position: absolute;
@@ -70,5 +61,15 @@
   .emptyImg{
     position: absolute;
   }
+}
 
+.aboutImagesContainer{
+  position: relative;
+  width: 100%;
+  .personalityImages{
+    position: relative;
+    width: 405px;
+    margin: 6px auto;
+
+  }
 }

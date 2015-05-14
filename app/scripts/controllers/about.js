@@ -17,6 +17,7 @@ angular.module('rolandApp')
   .factory('carouselData', function(){
     return{
       titles: ['Professional', 'Work Related', 'Managerial',  'Extracurricular', 'Team Spirit', 'Composure'],
+      baseImages: ['images/prof.png', 'images/customers.png', 'images/management.jpg', 'images/extracuricular.jpg', 'images/team.jpg', 'images/pressure.jpg'],
       details: [
          [
           'I am a Web Developer by profession.',
@@ -60,7 +61,7 @@ angular.module('rolandApp')
 
 
 
-  .directive('carouselAbout', function(carouselData){
+  .directive('carouselAbout', function(carouselData, myGsapFromTo){
     return{
       restrict: 'EA',
       scope:{
@@ -68,10 +69,12 @@ angular.module('rolandApp')
       },
       replace: true,
       templateUrl: 'views/aboutCarousel.html',
-      link: function(scope){
+      link: function(scope, elm){
         var count = 0;
         scope.count = 0;
+        scope.persImagesSource = carouselData.baseImages[0];
         scope.titleNumber = 0;
+        //scope.persImagesSource = carouselData.baseImages[count];
         scope.showQualities = function(num){
           //Since the above function is called from the view, we pass in a positive num to increment counter by 1, or negative number to decrement by 1
           if(num > 0){
@@ -86,22 +89,54 @@ angular.module('rolandApp')
           else if(count < 0){
             count = carouselData.details.length-1;
           }
+
           //loop through the factory service data and make them available to the view through the scope.
           for(var i= 0, len=carouselData.details.length; i<len; i+=1){
             scope.qualities = carouselData.details[count];
             scope.count = count;
+            slideTextBoxIn(num);
             scope.titleNumber = count;
+            scope.persImagesSource = carouselData.baseImages[count];
           }
-
         };
 
+        scope.qualityCategories = carouselData.titles; //provides the titles
+
         // The following function is required by direct click on the carousel disks in order to navigate the slides.
-        scope.qualityCategories = carouselData.titles;
-           scope.loadText = function(val){  //val is the index number passed from the directive scope, and plays same role as count.
+         scope.loadText = function(val){  //val is the index number passed from the directive scope, and plays same role as count.
            scope.qualities = carouselData.details[val];
            scope.count = val;
            scope.titleNumber = val;
-         }
+           slideTextBoxIn();
+           scope.persImagesSource = carouselData.baseImages[val];
+         };
+
+        //package together the series of animations to be run in one function
+        function slideTextBoxIn(direction){
+
+          direction = direction || null;
+          if(direction === 1){
+            myGsapFromTo.runAnimation('.aboutMeText',0.5, {left: '-500px'}, {left: '60px', ease:Sine.easeOut});
+          }
+          else{
+            myGsapFromTo.runAnimation('.aboutMeText', 0.5, {left: '100%'}, {left: '60px', ease:Sine.easeOut});
+          }
+          myGsapFromTo.runAnimation('.aboutMeText', 0.5, {color: '#a5a5a5'}, {delay:0.3, color: '#ffffff'});
+        }
       }
     }
-  });
+  })
+  .factory('myGsapFromTo', function(){
+    return{
+      runAnimation: function(animationTarget, duration, properties_from, properties_to){
+        TweenLite.fromTo(animationTarget, duration, properties_from, properties_to);
+      }
+    };
+  })
+
+  //This controller enables the active nav button to be toggled based on the route. Needs a root controller since the navs are at the root level.
+  .controller('RootCtrl', ['$scope', '$location', function ($scope, $location) {
+    $scope.isActive = function(route) {
+      return route === $location.path();
+    }
+  }]);
