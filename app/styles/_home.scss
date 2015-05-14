@@ -22,7 +22,8 @@ body {
   width: 100%;
   max-width: 960px;
   margin: 0 auto;
-  font-family: Marvel, sans-serif;
+  //font-family: Marvel, sans-serif;
+  font-family: 'Josefin Slab', serif;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -50,9 +51,23 @@ body {
 /* Custom page footer */
 .footer {
   position: relative;
-  padding-top: 19px;
   color: #777;
   border-top: 1px solid #e5e5e5;
+
+  .footerCopyRight{
+    text-align: center;
+    margin-top: 7px;
+    padding: 20px 0;
+    border-radius: 5px;
+    background: rgb(238,238,238); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(238,238,238,1) 0%, rgba(204,204,204,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(238,238,238,1)), color-stop(100%,rgba(204,204,204,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(238,238,238,1) 0%,rgba(204,204,204,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(238,238,238,1) 0%,rgba(204,204,204,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(238,238,238,1) 0%,rgba(204,204,204,1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(238,238,238,1) 0%,rgba(204,204,204,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#cccccc',GradientType=0 ); /* IE6-9 */
+  }
 }
 
 .container-narrow > hr {
@@ -103,7 +118,8 @@ body {
     background: -ms-linear-gradient(top,  rgba(238,238,238,1) 0%,rgba(204,204,204,1) 100%); /* IE10+ */
     background: linear-gradient(to bottom,  rgba(238,238,238,1) 0%,rgba(204,204,204,1) 100%); /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#cccccc',GradientType=0 ); /* IE6-9 */
-
+    margin-bottom: 8px;
+    border-radius: 5px;
   }
 
   .container {
@@ -144,6 +160,12 @@ body {
   .jumbotron{
     margin-bottom: 0;
     min-height: 760px;
+    .welcomeHeader{
+      margin-bottom: 45px;
+    }
+    .homeText{
+      margin-top: 50px;
+    }
     .animationContainer{
       position: relative;
       width: 70%;
@@ -153,7 +175,7 @@ body {
         font-size: 1.6em;
         font-weight: bold;
         left: 31px;
-        top: 180px;
+        top: 78px;
         color: #1765ac;
       }
       .webtext{
