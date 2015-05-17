@@ -152,7 +152,7 @@ angular.module('rolandApp')
             enabled: false
           }
 
-        })
+        });
       }
     }
   })
@@ -216,7 +216,7 @@ angular.module('rolandApp')
             enabled: false
           }
 
-        })
+        });
       }
     }
   })
@@ -275,7 +275,7 @@ angular.module('rolandApp')
           enabled: false
         }
 
-      })
+      });
     }
   }
 });
