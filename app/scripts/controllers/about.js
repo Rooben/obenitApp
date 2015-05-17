@@ -26,7 +26,7 @@ angular.module('rolandApp')
           'I have \'Think-out-of-the-box\' (Creative) skills.'
         ],
         [
-          'A Stake holder success is my success as well.',
+          'A Stake holder\'s success is my success as well.',
           'Customer satisfaction = business success.',
           ' I don\'t only respect date lines, I also develop assuring strategies towards that.'
         ],
@@ -56,7 +56,7 @@ angular.module('rolandApp')
           'I strive to be at work in time and not just on time.'
         ]
       ]
-    }
+    };
   })
 
 
@@ -124,7 +124,7 @@ angular.module('rolandApp')
           myGsapFromTo.runAnimation('.aboutMeText', 0.5, {color: '#a5a5a5'}, {delay:0.3, color: '#ffffff'});
         }
       }
-    }
+    };
   })
   .factory('myGsapFromTo', function(){
     return{
@@ -132,11 +132,4 @@ angular.module('rolandApp')
         TweenLite.fromTo(animationTarget, duration, properties_from, properties_to);
       }
     };
-  })
-
-  //This controller enables the active nav button to be toggled based on the route. Needs a root controller since the navs are at the root level.
-  .controller('RootCtrl', ['$scope', '$location', function ($scope, $location) {
-    $scope.isActive = function(route) {
-      return route === $location.path();
-    }
-  }]);
+  });
