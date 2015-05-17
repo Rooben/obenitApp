@@ -35,7 +35,7 @@ angular
         }
       })
 
-      // ABOUT PAGE  =================================
+      // ABOUT STATE  =================================
       .state('about', {
         url: '/about',
         views: {
@@ -49,6 +49,7 @@ angular
         }
       })
 
+      // SKILLS PAGE =================================
       .state('skills', {
         url: '/skills',
         views: {
@@ -57,15 +58,16 @@ angular
             controller: 'SkillsCtrl'
           },
           'siteRoot@': {
-            templateUrl: '../views/columnNav.html'
+            templateUrl: '../views/verticalNav.html',
+            controller: 'RootCtrl'
           }
         }
       })
 
       .state('skills.list', {
         url: '/list',
-        templateUrl: '../views/columnNav.html',
-        controller: 'SkillsdemoCtrl'
+        templateUrl: '../views/verticalNav.html',
+        controller: 'RootCtrl'
       })
 
       .state('skills.demos', {
@@ -74,6 +76,35 @@ angular
           '@': {
             templateUrl: 'views/skillsDemos.html',
             controller: 'SkillsdemoCtrl'
+          }
+        }
+      })
+
+
+    // Projects PAGE =================================
+      .state('projects', {
+        url: '/projects',
+        views: {
+          '@': {
+            templateUrl: 'views/projects.html',
+            controller: 'ProjectsCtrl'
+          },
+          'siteRoot@': {
+            templateUrl: '../views/sideNav.html'
+          }
+        }
+      })
+
+      // Contact PAGE =================================
+      .state('contact', {
+        url: '/contact',
+        views: {
+          '@': {
+            templateUrl: 'views/contact.html',
+            controller: 'ContactCtrl'
+          },
+          'siteRoot@': {
+            templateUrl: '../views/sideNav.html'
           }
         }
       });
