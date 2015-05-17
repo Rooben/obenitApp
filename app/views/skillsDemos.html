@@ -1,0 +1,8 @@
+
+<!-- issue.status in the next line plus .html is a pointer to a template in the views, when
+  a link is clicked, the link sends a $stateParam to the url, and based on the string value
+  of this $statePara in the scope, issue.status would point to different templates to
+   be loaded. -->
+
+<div class="skills-graphs" ng-include="'views/graphs/' + issue.status + '.html'"></div>  <!-- Note! This is where all the graphs are displayed ! -->
+
