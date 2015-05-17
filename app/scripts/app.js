@@ -14,33 +14,78 @@ angular
     'ngCookies',
     'ngMessages',
     'ngResource',
-    'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'ui.router'
   ])
-  .config(function ($routeProvider) {
-    $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
+  .config(function($stateProvider, $urlRouterProvider) {
+    $urlRouterProvider.otherwise('/');
+    $stateProvider
+      // HOME STATES  ===============================
+      .state('home', {
+        url: '/',
+        views: {
+          '@': {
+            templateUrl: 'views/home.html',
+            controller: 'HomeCtrl'
+          },
+          'siteRoot@': { //This means, display these in the ui-view in index.html(no name after the @), called siteRoot
+            templateUrl: '../views/sideNav.html'
+          }
+        }
       })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
+
+      // ABOUT PAGE  =================================
+      .state('about', {
+        url: '/about',
+        views: {
+          '@': {
+            templateUrl: 'views/about.html',
+            controller: 'AboutCtrl'
+          },
+          'siteRoot@': {
+            templateUrl: '../views/sideNav.html'
+          }
+        }
       })
-      .when('/skills', {
-        templateUrl: 'views/skills.html',
-        controller: 'SkillsCtrl'
+
+      .state('skills', {
+        url: '/skills',
+        views: {
+          '@': {//This means, display these in the ui-view without a name (no name before the @), in index.html(no name after the @).
+            templateUrl: 'views/skills.html',
+            controller: 'SkillsCtrl'
+          },
+          'siteRoot@': {
+            templateUrl: '../views/columnNav.html'
+          }
+        }
       })
-      .when('/projects', {
-        templateUrl: 'views/projects.html',
-        controller: 'ProjectsCtrl'
+
+      .state('skills.list', {
+        url: '/list',
+        templateUrl: '../views/columnNav.html',
+        controller: 'SkillsdemoCtrl'
       })
-      .when('/contact', {
-        templateUrl: 'views/contact.html',
-        controller: 'ContactCtrl'
-      })
-      .otherwise({
-        redirectTo: '/'
+
+      .state('skills.demos', {
+        url: '/:id',
+        views: {
+          '@': {
+            templateUrl: 'views/skillsDemos.html',
+            controller: 'SkillsdemoCtrl'
+          }
+        }
       });
-  });
+  })
+
+  //This controller enables the active nav button to be toggled based on the route. Needs a root controller since the navs are at the root level.
+  .controller('RootCtrl', ['$scope', '$location', function ($scope, $location) {
+    $scope.isActive = function(route) {
+      return route === $location.path();
+    };
+
+    $scope.inActive = function(route) {
+      return route !== $location.path();
+    }
+  }]);

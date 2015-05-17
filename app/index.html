@@ -41,7 +41,13 @@
                   <ul active-tog class="nav navbar-nav">
                     <li ng-class="{active: isActive('/')}"><a href="#/">Home</a></li>
                     <li ng-class="{active: isActive('/about')}"><a ng-href="#/about">About</a></li>
-                    <li ng-class="{active: isActive('/skills')}"><a ng-href="#/skills">Skills</a></li>
+                    <li ng-class="{
+                                    active: isActive('/skills') ||
+                                    isActive('/skills/pieChart') ||
+                                    isActive('/skills/barChart') ||
+                                    isActive('/skills/lineGraph') ||
+                                    isActive('/skills/histogram')
+                      }"><a ng-href="#/skills">Skills</a></li>
                     <li ng-class="{active: isActive('/projects')}"><a ng-href="#/projects">Projects</a></li>
                     <li ng-class="{active: isActive('/contacts')}"><a ng-href="#/contact">Contact</a></li>
                   </ul>
@@ -56,11 +62,11 @@
 
         <div class="sideMenu col-md-2"><!-- left column -->
           <img class="logo" ng-src="images/logo.png" alt="Personal logo" />
-          <div>Side content</div>
+          <div ui-view="siteRoot"></div>
         </div>
 
         <div class="mainDisplay col-md-10"><!-- right column -->
-          <div ng-view=""></div>
+          <div ui-view=""></div>
         </div>
 
       </div>
@@ -99,19 +105,23 @@
     <script src="bower_components/angular-cookies/angular-cookies.js"></script>
     <script src="bower_components/angular-messages/angular-messages.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
-    <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="bower_components/angular-touch/angular-touch.js"></script>
     <script src="bower_components/greensock/src/uncompressed/TweenMax.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <script src="bower_components/highcharts.com/js/highcharts.src.js"></script>
+    <script src="bower_components/highcharts.com/js/highcharts-more.src.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
+
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/controllers/home.js"></script>
         <script src="scripts/controllers/about.js"></script>
+        <script src="scripts/controllers/skills.js"></script>
         <script src="scripts/controllers/projects.js"></script>
+        <script src="scripts/controllers/skillsdemo.js"></script>
         <!-- endbuild -->
 </body>
 </html>
