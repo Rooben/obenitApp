@@ -21,3 +21,4 @@ workspace.xml
 tasks.xml
 vcs.xml
 encodings.xml
+.idea/encodings.xml
