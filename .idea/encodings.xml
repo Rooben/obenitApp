@@ -4,14 +4,29 @@
     <file url="file://$PROJECT_DIR$/.gitignore" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/scripts/app.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/scripts/controllers/about.js" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/scripts/controllers/main.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/scripts/controllers/home.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/scripts/controllers/skills.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/scripts/controllers/skillsdemo.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/styles/_about.scss" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/styles/_home.scss" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/styles/_skills.scss" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/styles/main.scss" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/views/about.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/views/aboutCarousel.html" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/views/main.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/views/columnNav.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/views/demos.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/views/details.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/views/graphs/barChart.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/views/graphs/histogram.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/views/graphs/lineGraph.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/views/graphs/pieChart.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/views/graphs/testChart.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/views/list-details.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/views/projects.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/views/sideNav.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/views/skills.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/views/skillsDemos.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bower.json" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/bower_components/angular/angular.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/bower_components/bootstrap/dist/css/bootstrap.min.css" charset="UTF-8" />
   </component>
