@@ -96,7 +96,6 @@ angular.module('rolandApp')
             scope.count = count;
             slideTextBoxIn(num);
             scope.titleNumber = count;
-            console.log(count);
             animatePersonalityImages(count);
           }
         };
@@ -106,7 +105,6 @@ angular.module('rolandApp')
         // The following function is required by direct click on the carousel disks in order to navigate the slides.
          scope.loadText = function(val){  //val is the index number passed from the directive scope, and plays same role as count.
            count = val;
-           console.log(count);
            scope.qualities = carouselData.details[val];
            scope.count = val;
            scope.titleNumber = val;
