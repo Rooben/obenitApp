@@ -1,6 +1,9 @@
 
 // bower:scss
 // endbower
+$lighterGray : #e2e3e7;
+$darkerGray: #D7D7D7;
+
 
 /* apply a natural box layout model to all elements, but allowing components to change */
 html {
@@ -111,6 +114,20 @@ body {
   .logo{
     width: 130px;
     height: 130px;
+    margin-bottom: 15px;
+    cursor: pointer;
+  }
+
+  .vertNav{
+    margin: 15px 0;
+  }
+
+  #loading{
+    z-index: 100;
+  }
+  .spinnerContainer{
+    width: 70px;
+    margin: 0 auto;
   }
 
   #navbarLine{
@@ -212,7 +229,7 @@ body {
   }
 
   .sideMenu{
-    background-color: #D7D7D7;
+    background-color: $darkerGray;
     border-radius: 5px;
     .vertActive{
       color: #3938cb;
