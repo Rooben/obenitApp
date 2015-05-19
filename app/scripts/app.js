@@ -119,4 +119,9 @@ angular
     $scope.inActive = function(route) {
       return route !== $location.path();
     }
+
+    $(document).ready(function(){
+      $('#loading').hide();
+    });
+
   }]);
