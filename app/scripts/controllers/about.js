@@ -9,7 +9,7 @@
  */
 angular.module('rolandApp')
   .controller('AboutCtrl', function ($scope, carouselData) {
-      for(var i=0; i<carouselData.details.length; i++){
+      for(var i=0; i<carouselData.details.length; i++){ //carouselData is a factory service. See below
         $scope.qualities = carouselData.details[0];
       }
   })
@@ -96,7 +96,8 @@ angular.module('rolandApp')
             scope.count = count;
             slideTextBoxIn(num);
             scope.titleNumber = count;
-            scope.persImagesSource = carouselData.baseImages[count];
+            console.log(count);
+            animatePersonalityImages(count);
           }
         };
 
@@ -104,16 +105,23 @@ angular.module('rolandApp')
 
         // The following function is required by direct click on the carousel disks in order to navigate the slides.
          scope.loadText = function(val){  //val is the index number passed from the directive scope, and plays same role as count.
+           count = val;
+           console.log(count);
            scope.qualities = carouselData.details[val];
            scope.count = val;
            scope.titleNumber = val;
            slideTextBoxIn();
-           scope.persImagesSource = carouselData.baseImages[val];
+           animatePersonalityImages(val);
          };
+
+        //This function doesn't only change the images(src), but also animates the opacity of the image element
+        function animatePersonalityImages(index){
+          myGsapFromTo.runAnimation('#persImages', 1, {opacity: 0}, {opacity: 1});
+          scope.persImagesSource = carouselData.baseImages[index];
+        }
 
         //package together the series of animations to be run in one function
         function slideTextBoxIn(direction){
-
           direction = direction || null;
           if(direction === 1){
             myGsapFromTo.runAnimation('.aboutMeText',0.5, {left: '-500px'}, {left: '60px', ease:Sine.easeOut});
