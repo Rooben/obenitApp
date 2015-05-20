@@ -116,7 +116,7 @@ angular
   .controller('RootCtrl', ['$scope', '$location', function ($scope, $location) {
 
     var myPortfolio = {};
-    $scope.isActive = function(route) {
+    $scope.isActive = function(route) { //used to toggle the active class in the nav bar.
       if(route === $location.path()){
         myPortfolio.page =  route.substring(1, route.length).toUpperCase(); //Give me the current page in caps.
         if(myPortfolio.page === ''){myPortfolio.page = 'HOME'}
@@ -124,16 +124,32 @@ angular
       }
       return route === $location.path();
     };
-
+    //If url does not match, use this to toggle a different design.
     $scope.inActive = function(route) {
       return route !== $location.path();
     };
 
+    // Check the url and if it is not one of the skills ui-states, don't show the demos button.
+    function conditionallyLoadDemoButton(){
+      myPortfolio.pathRegex = /^\/skills/;
+      myPortfolio.pageUrl = $location.path();
+      //if($location.path() === '/skills'){
+      if(myPortfolio.pathRegex.test(myPortfolio.pageUrl)){
+        $('.demoMenu').show();  //If in the mobile devices the page is skills, show the Demos button.
+      }else{
+        $('.demoMenu').hide();
+      }
+    }
+
+    //Each time the state or url changes run this function to check if the demos button should be loaded, but check if in mobile view first.
+      $scope.$on('$stateChangeStart', function(){
+        if(document.documentElement.clientWidth < 768){
+          conditionallyLoadDemoButton(); // Check if the demos button is required, if so, then load it.
+        }
+      });
+
     $(document).ready(function(){
       $('#loading').hide();      //Stop the spinner once the the DOM is ready.
-      if($location.path() === '/skills'){
-        $('.demoMenu').show();  //If in the mobile devices the page is skills, show the sideMenu that was hidden.
-      }
     });
 
     /* Control of the main nav in the mobile devices*/
@@ -151,7 +167,9 @@ angular
         //*************** slide up  *********************************************
         foldUpNav();
       }
+
     };
+
 
     // Slide up function ********************************************************
     function foldUpNav(){
@@ -174,7 +192,7 @@ angular
     $scope.toggleDemoMenu = function(){
       if(myPortfolio.menuStatus === 'closed'){
         //*************** slide menu down  *******************************************
-        TweenLite.fromTo('.sideMenu', 0.3, {display: 'none', height: 0}, {display: 'block', height: '176px', ease:Sine.easeOut, onComplete: function(){
+        TweenLite.fromTo('.sideMenu', 0.3, {display: 'none', height: 0}, {display: 'block', height: '220px', ease:Sine.easeOut, onComplete: function(){
           myPortfolio.menuStatus = 'opened';
         }});
       }
@@ -184,7 +202,8 @@ angular
       }
 
       function foldUpMenu(){
-        TweenLite.fromTo('.sideMenu', 0.3, {display: 'block', height: '176px'}, {display: 'none', height: 0, ease:Sine.easeOut, onComplete: function(){
+        TweenLite.fromTo('.sideMenu', 0.3, {display: 'block', height: '220px'}, {display: 'none', height: 0, ease:Sine.easeOut, onComplete: function(){
+        //**important to note here that the height specified here is responsible for the space allowed for the other elements. If you it becomes short, come and change here.
           myPortfolio.menuStatus = 'closed';
         }});
       }

@@ -139,6 +139,7 @@ h1, h2, h3, h4{
     cursor: pointer;
   }
   .demoMenu{
+    display: none;
     float: left;
     margin: 2px 3px;
     cursor: pointer;
@@ -147,7 +148,7 @@ h1, h2, h3, h4{
     position: absolute;
     background-color: #d9d1b5;
     border: solid 1px #a78101;
-    padding: 2px;
+    padding: 4px 2px 0 2px;
     font-size: 1.2em;
     font-weight: bold;
     border-radius: 5px;
@@ -254,6 +255,7 @@ h1, h2, h3, h4{
   margin-top: -25px;
   .btn-block + .btn-block {/* over ride twitter Bootstrap, remove the margins bwn li demos*/
     margin-top: 0px;
+    font-size: 1.4em;
   }
 }
 
@@ -274,6 +276,7 @@ h1, h2, h3, h4{
 
 .btn-default {
   font-family: 'Marmelad', sans-serif;
+  font-size: 1.4em;
   background: #7f6300; /* Old browsers */
   background: -moz-linear-gradient(top, #7f6300 0%, #ffffff 9%, #7f6300 20%, #ffffff 91%, #7a5d00 100%); /* FF3.6+ */
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #7f6300), color-stop(9%, #ffffff), color-stop(20%, #7f6300), color-stop(91%, #ffffff), color-stop(100%, #7a5d00)); /* Chrome,Safari4+ */
@@ -286,16 +289,16 @@ h1, h2, h3, h4{
 
 
 .btn-default:hover {
-  color: #777777;
+  color: #000000;
   border-style: solid;
-  background: #eeeeee; /* Old browsers */
-  background: -moz-linear-gradient(top,  #eeeeee 0%, #eeeeee 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eeeeee), color-stop(100%,#eeeeee)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top,  #eeeeee 0%,#eeeeee 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top,  #eeeeee 0%,#eeeeee 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top,  #eeeeee 0%,#eeeeee 100%); /* IE10+ */
-  background: linear-gradient(to bottom,  #eeeeee 0%,#eeeeee 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#eeeeee',GradientType=0 ); /* IE6-9 */
+  background: #d1d1d1; /* Old browsers */
+  background: -moz-linear-gradient(top,  #d1d1d1 0%, #7f7f7f 14%, #f4f4f4 88%, #596a72 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d1d1d1), color-stop(14%,#7f7f7f), color-stop(88%,#f4f4f4), color-stop(100%,#596a72)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #d1d1d1 0%,#7f7f7f 14%,#f4f4f4 88%,#596a72 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #d1d1d1 0%,#7f7f7f 14%,#f4f4f4 88%,#596a72 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #d1d1d1 0%,#7f7f7f 14%,#f4f4f4 88%,#596a72 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  #d1d1d1 0%,#7f7f7f 14%,#f4f4f4 88%,#596a72 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d1d1d1', endColorstr='#596a72',GradientType=0 ); /* IE6-9 */
 }
 
 
@@ -317,11 +320,18 @@ h1, h2, h3, h4{
     cursor: pointer;
   }
 
-  //**********************
+  .btn-default {
+    font-size: 15px;
+  }
+
   .sideMenu{
     display: block;
+    .btn-block + .btn-block {/* over ride twitter Bootstrap, remove the margins bwn li demos*/
+      margin-top: 3px;
+      font-size: 14px;
+    }
   }
-  //*************************
+
 
   .demoMenu, .mobileMainMenu{
     display: none;
@@ -394,15 +404,18 @@ h1, h2, h3, h4{
     }
   }
 
-
   .sideMenu{
+    display: block;
+    height: 760px;
     background-color: $darkerGray;
+    margin-top: 0;
     border-radius: 5px;
     .vertActive{
       color: #3938cb;
       font-weight: bold;
     }
   }
+
   .row .sideMenu{ /*Over riding the above rule */
     padding: 15px;
     //min-height: 660px;
