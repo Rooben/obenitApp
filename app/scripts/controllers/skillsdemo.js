@@ -89,7 +89,7 @@ angular.module('rolandApp')
         //  chart.series[0].setData(newValue, true);
         //}, true);
       }
-    }
+    };
   })
 
   .directive('pieChart', function(){
@@ -154,7 +154,7 @@ angular.module('rolandApp')
 
         });
       }
-    }
+    };
   })
 
   .directive('histogram', function(){
@@ -218,7 +218,7 @@ angular.module('rolandApp')
 
         });
       }
-    }
+    };
   })
 
 .directive('barChart', function(){
@@ -277,7 +277,7 @@ angular.module('rolandApp')
 
       });
     }
-  }
+  };
 });
 
 

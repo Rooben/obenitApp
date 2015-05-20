@@ -26,41 +26,40 @@
     <div class="container">
       <!-- HEADER START -->
       <div class="row header">
-        <div id="navbarLine" class="col-md-12 navbar navbar-default" role="navigation">
+        <div id="navbarLine" class="horizontalNavBar col-md-12 navbar navbar-default" role="navigation">
+            <div ng-click="toggleDemoMenu()" class="demoMenu">
+              <img src="images/menu_widget.png" alt="Menu widget"/>
+              <span class="demoLabel">DEMOS</span>
+            </div>
 
-              <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
-                  <span class="sr-only">Toggle navigation</span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                </button>
-              </div>
+            <div class="currentPage" ng-cloak>{{currentPage}}</div>
 
-                <div class="collapse navbar-collapse" id="js-navbar-collapse">
-                  <ul active-tog class="nav navbar-nav">
-                    <li ng-class="{active: isActive('/')}"><a href="#/">Home</a></li>
-                    <li ng-class="{active: isActive('/about')}"><a ng-href="#/about">About</a></li>
-                    <li ng-class="{
-                                    active: isActive('/skills') ||
-                                    isActive('/skills/pieChart') ||
-                                    isActive('/skills/barChart') ||
-                                    isActive('/skills/lineGraph') ||
-                                    isActive('/skills/histogram')
-                      }"><a ng-href="#/skills">Skills</a></li>
-                    <li ng-class="{active: isActive('/projects')}"><a ng-href="#/projects">Projects</a></li>
-                    <li ng-class="{active: isActive('/contact')}"><a ng-href="#/contact">Contact</a></li>
-                  </ul>
-                </div>
+            <div ng-click="toggleMenu()" class="mobileMainMenu">
+              <img src="images/menu_widget.png" alt="Menu widget"/>
+            </div>
 
-        </div>
+              <ul active-tog class="nav navbar-nav">
+                <li ng-click="clearMenu()" ng-class="{active: isActive('/')}"><a href="#/">Home</a></li>
+                <li ng-click="clearMenu()" ng-class="{active: isActive('/about')}"><a ng-href="#/about">About</a></li>
+                <li ng-click="clearMenu()" ng-class="{
+                                active: isActive('/skills') ||
+                                isActive('/skills/pieChart') ||
+                                isActive('/skills/barChart') ||
+                                isActive('/skills/lineGraph') ||
+                                isActive('/skills/histogram')
+                  }"><a ng-href="#/skills">Skills</a></li>
+                <li ng-click="clearMenu()" ng-class="{active: isActive('/projects')}"><a ng-href="#/projects">Projects</a></li>
+                <li ng-click="clearMenu()" ng-class="{active: isActive('/contact')}"><a ng-href="#/contact">Contact</a></li>
+              </ul>
+
+      </div>
       </div>
       <!-- HEADER END -->
 
       <!-- MAIN CONTENT START -->
       <div class="mainBlock row">
 
-        <div class="sideMenu col-md-2"><!-- left column -->
+        <div class="sideMenu col-sm-2"><!-- left column -->
           <a ng-href="#/">
             <img class="logo" ng-src="images/logo.png" alt="Personal logo" />
           </a>
@@ -68,7 +67,7 @@
           <div class="vertNav"  ui-view="siteRoot"></div>
         </div>
 
-        <div class="mainDisplay col-md-10"><!-- right column -->
+        <div class="mainDisplay col-sm-10"><!-- right column -->
           <div ui-view=""></div>
         </div>
 

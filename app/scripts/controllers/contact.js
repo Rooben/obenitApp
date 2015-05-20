@@ -9,7 +9,9 @@
  */
 angular.module('rolandApp')
   .controller('ContactCtrl', function ($scope) {
-
+    $(document).ready(function(){
+      $('#feedbkLoader').hide();
+    });
   });
 
 

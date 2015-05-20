@@ -1,9 +1,7 @@
 <div class="contactContainer col-md-12">
 
-  <div class="contactHeaderBox col-xs-12">
-    <div class="projHeader"><h3 >Contact Me</h3></div>
-  </div>
-    <div class="contactDecor">
+
+ <div class="contactDecor">
   <div class="col-xs-12">
     <div class="directContacts">
       <!-- Loader spinner -->
@@ -12,7 +10,7 @@
         <span id="feedbkText"></span>
       </div>
       <!-- Image with contacts -->
-      <img src="images/contact.png" alt="Image with contacts" width="100%" height="80%"/>
+      <img class="contact-card" src="images/contact.png" alt="Image with contacts"/>
     </div>
   </div>
 
@@ -20,26 +18,25 @@
     <div class="contactForm"><!-- Contact form begins -->
         <form id="contactFrm" name="contactFrm" action="#" method="POST"  role="form">
 
-          <label class="col-xs-4" for="contFormfname">First Name<span class="req_star">*</span> </label>
-          <div class="col-xs-8">
+          <div class="formItem">
+            <label class="contactFormL" for="contFormfname">First Name<span class="req_star">*</span> </label>
             <input type="text" required="true" class="form-control contact_inpt pureText" id="con_fname"  maxlength="25" placeholder="First Name"><span class="remaining"></span>
           </div>
 
-          <label class="col-xs-4" for="contFormlname">Last Name<span class="req_star">*</span> </label>
-          <div class="col-xs-8">
+
+          <div class="formItem">
+            <label class="contactFormL" for="contFormlname">Last Name<span class="req_star">*</span> </label>
             <input type="text" required="true" class="form-control contact_inpt pureText" id="con_lname"  maxlength="25" placeholder="Last Name"><span class="remaining"></span>
           </div>
 
-          <label class="col-xs-4" for="con_email">Email<span class="req_star">*</span> </label>
-          <div class="col-xs-8">
+
+          <div class="formItem">
+            <label class="contactFormL" for="con_email">Email<span class="req_star">*</span> </label>
             <input type="email" required="true" class="form-control contact_inpt pureEmail" id="con_email" name="con_email"  maxlength="40" placeholder="Email"><span class="remaining"></span>
           </div>
 
-          <div class="col-xs-12">
-            <label class="col-xs-4" for="contFormMessage">Message<span class="req_star">*</span> </label>
-          </div>
-
-          <div class="col-xs-12">
+          <div class="formItem">
+            <label class="contactFormL" for="contFormMessage">Message<span class="req_star">*</span> </label>
             <textarea required="true" class="form-control contact_inpt  pureComment" id="con_message" maxlength="200" rows="5" placeholder="Message"></textarea><span class="remaining"></span>
           </div>
 
