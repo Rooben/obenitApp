@@ -226,7 +226,6 @@
   //*************************************
   .contents_explanation2 {
     border: solid 1px #979797;
-    margin-left: 5px;
     font-size: 18px;
     min-height: 145px;
     padding: 5px;
@@ -265,6 +264,7 @@
       //  /************************ End of Table Styles  **********************/
 
       div.contents_explanation2 {
+        margin-left: 5px;
         h4 {
           font-size: 14px;
         }

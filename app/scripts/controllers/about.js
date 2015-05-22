@@ -122,10 +122,10 @@ angular.module('rolandApp')
         function slideTextBoxIn(direction){
           direction = direction || null;
           if(direction === 1){
-            myGsapFromTo.runAnimation('.aboutMeText',0.5, {left: '-500px'}, {left: '60px', ease:Sine.easeOut});
+            myGsapFromTo.runAnimation('.aboutMeText',0.5, {left: '-500px'}, {left: '10%', ease:Sine.easeOut});
           }
           else{
-            myGsapFromTo.runAnimation('.aboutMeText', 0.5, {left: '100%'}, {left: '60px', ease:Sine.easeOut});
+            myGsapFromTo.runAnimation('.aboutMeText', 0.5, {left: '100%'}, {left: '10%', ease:Sine.easeOut});
           }
           myGsapFromTo.runAnimation('.aboutMeText', 0.5, {color: '#a5a5a5'}, {delay:0.3, color: '#ffffff'});
         }

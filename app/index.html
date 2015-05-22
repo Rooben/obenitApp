@@ -27,6 +27,7 @@
       <!-- HEADER START -->
       <div class="row header">
         <div id="navbarLine" class="horizontalNavBar col-md-12 navbar navbar-default" role="navigation">
+            <div class="spinnerContainer"><span id="loading"></span></div>  <!-- Loading spinner -->
             <div ng-click="toggleDemoMenu()" class="demoMenu">
               <img src="images/menu_widget.png" alt="Menu widget"/>
               <span class="demoLabel">DEMOS</span>
@@ -58,12 +59,10 @@
 
       <!-- MAIN CONTENT START -->
       <div class="mainBlock row">
-
         <div class="sideMenu col-sm-2"><!-- left column -->
           <a ng-href="#/">
             <img class="logo" ng-src="images/logo.png" alt="Personal logo" />
           </a>
-          <div class="spinnerContainer"><span id="loading"></span></div>
           <div class="vertNav"  ui-view="siteRoot"></div>
         </div>
 

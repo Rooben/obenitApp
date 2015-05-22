@@ -2,6 +2,15 @@
   <div  class="carosBox">
     <img class="caros" ng-src="images/img1.jpg" alt="Carousel">
 
+
+    <!-- Left and right arrows -->
+    <div class="" ng-click="showQualities(-1)">
+      <img class="leftArr" ng-src="images/arrLeft.png"/>
+    </div>
+    <div class="" ng-click="showQualities(1)">
+      <img class="rightArr" ng-src="images/arrRight.png"/>
+    </div>
+
     <div>
 
       <div>
@@ -21,19 +30,6 @@
     </div>
 
   </div>
-
-  <div>
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner"></div>
-  </div>
-
-  <!-- Left and right controls -->
-  <a class="left carousel-control" ng-click="showQualities(-1)">
-    <img class="caroselDirection" ng-src="images/arrLeft.png"/>
-  </a>
-  <a class="right carousel-control" ng-click="showQualities(1)">
-    <img class="caroselDirection" ng-src="images/arrRight.png"/>
-  </a>
 
   <div  class="aboutImagesContainer">
     <div class="personalityImages">

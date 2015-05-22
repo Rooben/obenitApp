@@ -8,7 +8,7 @@
  * Controller of the rolandApp
  */
 angular.module('rolandApp')
-  .controller('SkillsCtrl', function ($scope, myGsapFromTo) {
+  .controller('SkillsCtrl', function ($scope) {
     $(function(){
       $scope.demoMessage = $('.mobileMainMenu').css('display') === 'block' ? 'Click on the "Demos" button'  : 'Use the left pane';
     });

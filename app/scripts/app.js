@@ -119,7 +119,7 @@ angular
     $scope.isActive = function(route) { //used to toggle the active class in the nav bar.
       if(route === $location.path()){
         myPortfolio.page =  route.substring(1, route.length).toUpperCase(); //Give me the current page in caps.
-        if(myPortfolio.page === ''){myPortfolio.page = 'HOME'}
+        if(myPortfolio.page === ''){myPortfolio.page = 'HOME';}
         $scope.currentPage = myPortfolio.page;
       }
       return route === $location.path();
@@ -158,8 +158,8 @@ angular
     $scope.toggleMenu = function(){ //This function is called when the small menu widget is clicked.
       if(myPortfolio.mobileNavStatus === 'closed'){
         //*************** slide down  *******************************************
-        TweenLite.fromTo('.nav',.3, {display: 'none', height: 0}, {display: 'block', height: '208px', ease: Sine.easeOut, onComplete: function(){
-          myPortfolio.mobileNavStatus = "opened";
+        TweenLite.fromTo('.nav',0.3, {display: 'none', height: 0}, {display: 'block', height: '205px', ease: Sine.easeOut, onComplete: function(){
+          myPortfolio.mobileNavStatus = 'opened';
           $scope.mobileNavStatus = true;
         }});
       }
@@ -173,8 +173,8 @@ angular
 
     // Slide up function ********************************************************
     function foldUpNav(){
-      TweenLite.fromTo('.nav',.3, {display: 'block', height: '208px'}, {display: 'none', height: 0, ease: Sine.easeOut, onComplete: function(){
-        myPortfolio.mobileNavStatus = "closed";
+      TweenLite.fromTo('.nav',0.3, {display: 'block', height: '208px'}, {display: 'none', height: 0, ease: Sine.easeOut, onComplete: function(){
+        myPortfolio.mobileNavStatus = 'closed';
         $scope.mobileNavStatus = false;
       }});
     }
@@ -211,6 +211,11 @@ angular
       //Re-use the foldUpMenu to fold up the menu each time it's li tag is clicked.
       $scope.closeDemoMenu = function(){
         foldUpMenu();
+        //Close the main menu, if opened
+        $scope.clearMenu();
       };
+
+      //Close the main menu, if opened
+      $scope.clearMenu();
     };
   }]);

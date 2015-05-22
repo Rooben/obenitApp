@@ -39,7 +39,7 @@
     content: "Contact Me";
     position: absolute;
     left: 40%;
-    top: -2px;
+    top: -17px;
     padding: 5px;
     background-color: $lighterGray;
     border-radius: 10px;
@@ -158,6 +158,7 @@
 
     .contactDecor:before{
       left: 43%;
+      top: -2px;
     }
 
     .contactForm {
@@ -180,6 +181,7 @@
 
     .contactDecor:before{
       left: 31%;
+      top: -17px;
     }
     .contactForm input{
       width: 50%;
