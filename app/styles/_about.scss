@@ -1,11 +1,4 @@
 .about-styles {
-  //.caroselDirection {
-  //  width: 100%;
-  //  height: 100%;
-  ////  margin-top: 210px;
-  //  cursor: pointer;
-  //}
-
   %arr{
     position: absolute;
     top: 190px;
@@ -23,15 +16,6 @@
     left: 0;
     @extend %arr;
   }
-  //.carosBox {
-  //  width: 90%;
-  //  min-width: 408px;
-  //  .caros {
-  //    width: 100%;
-  //    height: 500px;
-  //  }
-  //}
-  //
 
   .carosBox {
     position: relative;
@@ -185,28 +169,6 @@
   }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   /* Responsive: Portrait tablets and up */
   @media screen and (min-width: 768px) {
 
@@ -214,99 +176,6 @@
       width: 75px;
       height: 60px;
     }
-
-    //.carosBox {
-    //  width: 90%;
-    //  min-width: 408px;
-    //  .caros {
-    //    width: 100%;
-    //    height: 500px;
-    //  }
-    //}
-    //
-
-
-
-
-
-
-
-    //.caroselDirection {
-      //  width: 80px;
-      //  height: 60px;
-      //  margin-top: 210px;
-      //  cursor: pointer;
-      //}
-      //.caros {
-      //  position: relative;
-      //  width: 580px;
-      //  height: 500px;
-      //  margin: 0 auto;
-      //}
-      //.carosBox {
-      //  position: relative;
-      //  width: 580px;
-      //  margin: 0 auto;
-      //  overflow: hidden;
-      //  .aboutMeText {
-      //    position: absolute;
-      //    font-family: 'Josefin Slab', serif;
-      //    color: #ffffff;
-      //    font-size: 1.7em;
-      //    font-style: italic;
-      //    font-weight: bold;
-      //    width: 80%;
-      //    top: 100px;
-      //    left: 50px;
-      //    text-shadow: 1px 1px #444444;
-      //  }
-      //  .carousel-caption {
-      //    position: absolute;
-      //    bottom: -30px;
-      //    .captionText {
-      //      position: absolute;
-      //      top: -370px;
-      //      left: 100px;
-      //    }
-      //  }
-      //}
-      //
-      //.indicatorBox {
-      //  position: relative;
-      //  width: 282px;
-      //  margin: 0 auto;
-      //  bottom: 22px;
-      //  ol li {
-      //    list-style-type: disc;
-      //    font-size: 50px;
-      //    float: left;
-      //    margin-left: 40px;
-      //    bottom: 20px;
-      //    color: #ffffff;
-      //    cursor: pointer;
-      //  }
-      //  .hollowDisk {
-      //    list-style-type: circle;
-      //  }
-      //}
-      //.emptyImg {
-      //  position: absolute;
-      //}
-      //
-      //.aboutImagesContainer {
-      //  position: relative;
-      //  width: 100%;
-      //  border-bottom: solid 1px #cccccc;
-      //  .personalityImages {
-      //    position: relative;
-      //    border: solid 1px #cccccc;
-      //    width: 405px;
-      //    margin: 5px auto;
-      //    -webkit-box-shadow: -1px -10px 92px -9px rgba(0, 0, 0, 0.75);
-      //    -moz-box-shadow: -1px -10px 92px -9px rgba(0, 0, 0, 0.75);
-      //    box-shadow: -1px -10px 92px -9px rgba(0, 0, 0, 0.75);
-      //  }
-      //}
   }
 
 }

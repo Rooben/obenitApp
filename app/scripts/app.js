@@ -116,7 +116,7 @@ angular
   .controller('RootCtrl', ['$scope', '$location', function ($scope, $location) {
 
     var myPortfolio = {};
-    $scope.isActive = function(route) { //used to toggle the active class in the nav bar.
+    $scope.isActive = function(route) { //used to toggle the customActive class in the nav bar.
       if(route === $location.path()){
         myPortfolio.page =  route.substring(1, route.length).toUpperCase(); //Give me the current page in caps.
         if(myPortfolio.page === ''){myPortfolio.page = 'HOME';}
@@ -133,7 +133,6 @@ angular
     function conditionallyLoadDemoButton(){
       myPortfolio.pathRegex = /^\/skills/;
       myPortfolio.pageUrl = $location.path();
-      //if($location.path() === '/skills'){
       if(myPortfolio.pathRegex.test(myPortfolio.pageUrl)){
         $('.demoMenu').show();  //If in the mobile devices the page is skills, show the Demos button.
       }else{
@@ -150,6 +149,19 @@ angular
 
     $(document).ready(function(){
       $('#loading').hide();      //Stop the spinner once the the DOM is ready.
+      //$(window).bind('resize', function() { location.reload(); });
+      window.onorientationchange = function(){
+        var orientation = window.orientation;
+        switch(orientation) {
+          case 0: window.location.reload();
+          break;
+          case 90: window.location.reload();
+          break;
+          case -90: window.location.reload();
+          break;
+        }
+      }
+
     });
 
     /* Control of the main nav in the mobile devices*/

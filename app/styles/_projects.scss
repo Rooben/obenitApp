@@ -13,7 +13,7 @@
     width: 200px;
     margin: 0 auto;
     padding: 8px;
-    border-radius: 10px;
+    border-radius: $borderRadius10;
     border: solid 1px #c7c7c7;
     h3{
       margin: 0;
@@ -48,27 +48,14 @@
     border-radius: 6px;
     width: 200px;
     height: 100px;
-
-    background: rgb(238, 238, 238); /* Old browsers */
-    background: -moz-linear-gradient(top, rgba(238, 238, 238, 1) 0%, rgba(204, 204, 204, 1) 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(238, 238, 238, 1)), color-stop(100%, rgba(204, 204, 204, 1))); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top, rgba(238, 238, 238, 1) 0%, rgba(204, 204, 204, 1) 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top, rgba(238, 238, 238, 1) 0%, rgba(204, 204, 204, 1) 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top, rgba(238, 238, 238, 1) 0%, rgba(204, 204, 204, 1) 100%); /* IE10+ */
-    background: linear-gradient(to bottom, rgba(238, 238, 238, 1) 0%, rgba(204, 204, 204, 1) 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eeeeee', endColorstr='#cccccc', GradientType=0); /* IE6-9 */
+    @include linGradient(rgb(238, 238, 238), 0%, rgb(238, 238, 238), 14%, rgba(204, 204, 204, 1),
+      88%, rgba(204, 204, 204, 1), 91%, rgba(204, 204, 204, 1), 100%);
   }
 
   [class*="badger"]:hover {
-
-    background: #7f6300; /* Old browsers */
-    background: -moz-linear-gradient(top, #7f6300 0%, #ffffff 7%, #7f6300 95%, #7a5d00 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #7f6300), color-stop(7%, #ffffff), color-stop(95%, #7f6300), color-stop(100%, #7a5d00)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top, #7f6300 0%, #ffffff 7%, #7f6300 95%, #7a5d00 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top, #7f6300 0%, #ffffff 7%, #7f6300 95%, #7a5d00 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top, #7f6300 0%, #ffffff 7%, #7f6300 95%, #7a5d00 100%); /* IE10+ */
-    background: linear-gradient(to bottom, #7f6300 0%, #ffffff 7%, #7f6300 95%, #7a5d00 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7f6300', endColorstr='#7a5d00', GradientType=0); /* IE6-9 */
+    @include linGradient(#7f6300, 0%, #ffffff, 1%, #ffffff,
+      1%, #7f6300, 90%, #7a5d00, 60%);
+    cursor: pointer;
   }
 
   .modal_header {

@@ -2,7 +2,7 @@
 <html class="no-js">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Roland's Portfolio</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -17,20 +17,19 @@
     <!-- Google fonts CDN -->
     <link href='http://fonts.googleapis.com/css?family=Petit+Formal+Script|Josefin+Slab:400,700|Marmelad|Marvel:400,700italic' rel='stylesheet' type='text/css'>
   </head>
-  <body ng-app="rolandApp" ng-controller="RootCtrl">
+  <body ng-app="rolandApp">
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="container">
+    <div class="container" ng-controller="RootCtrl">
       <!-- HEADER START -->
       <div class="row header">
         <div id="navbarLine" class="horizontalNavBar col-md-12 navbar navbar-default" role="navigation">
             <div class="spinnerContainer"><span id="loading"></span></div>  <!-- Loading spinner -->
             <div ng-click="toggleDemoMenu()" class="demoMenu">
-              <img src="images/menu_widget.png" alt="Menu widget"/>
-              <span class="demoLabel">DEMOS</span>
+              <img src="images/demos.png" alt="Menu widget"/>
             </div>
 
             <div class="currentPage" ng-cloak>{{currentPage}}</div>
@@ -40,17 +39,17 @@
             </div>
 
               <ul active-tog class="nav navbar-nav">
-                <li ng-click="clearMenu()" ng-class="{active: isActive('/')}"><a href="#/">Home</a></li>
-                <li ng-click="clearMenu()" ng-class="{active: isActive('/about')}"><a ng-href="#/about">About</a></li>
+                <li ng-click="clearMenu()" ng-class="{customActive: isActive('/')}"><a href="#/">Home</a></li>
+                <li ng-click="clearMenu()" ng-class="{customActive: isActive('/about')}"><a ng-href="#/about">About</a></li>
                 <li ng-click="clearMenu()" ng-class="{
-                                active: isActive('/skills') ||
+                                customActive: isActive('/skills') ||
                                 isActive('/skills/pieChart') ||
                                 isActive('/skills/barChart') ||
                                 isActive('/skills/lineGraph') ||
                                 isActive('/skills/histogram')
                   }"><a ng-href="#/skills">Skills</a></li>
-                <li ng-click="clearMenu()" ng-class="{active: isActive('/projects')}"><a ng-href="#/projects">Projects</a></li>
-                <li ng-click="clearMenu()" ng-class="{active: isActive('/contact')}"><a ng-href="#/contact">Contact</a></li>
+                <li ng-click="clearMenu()" ng-class="{customActive: isActive('/projects')}"><a ng-href="#/projects">Projects</a></li>
+                <li ng-click="clearMenu()" ng-class="{customActive: isActive('/contact')}"><a ng-href="#/contact">Contact</a></li>
               </ul>
 
       </div>
