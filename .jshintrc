@@ -16,8 +16,12 @@
   "unused": true,
   "strict": true,
   "trailing": true,
+
   "smarttabs": true,
   "globals": {
-    "angular": false
+    "angular": false,
+    "s": false,
+    "TweenLite": false,
+    "sine": false
   }
 }
