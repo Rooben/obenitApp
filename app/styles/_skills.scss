@@ -10,8 +10,7 @@
     padding: 5px 0;
     border-style: solid;
     border-color: #666666;
-    @include linGradient(rgb(238, 238, 238), 0%, rgba(204, 204, 204, 1),
-      100%, null, null, null, null, null, null);
+    @include linGradient(rgb(238, 238, 238), 0%, rgb(238, 238, 238), 5%,  rgb(238, 238, 238), 10%, rgba(204, 204, 204, 1), 90%, rgba(204, 204, 204, 1), 100%);
   }
   .panel-primary > .panel-heading {
     color: #ffffff;

@@ -18,7 +18,7 @@ $borderRadius10: 10px;
   background: -o-linear-gradient(top, $color1 $percent1, $color2 $percent2, $color3 $percent3, $color4 $percent4, $color5 $percent5); /* Opera 11.10+ */
   background: -ms-linear-gradient(top, $color1 $percent1, $color2 $percent2, $color3 $percent3, $color4 $percent4, $color5 $percent5); /* IE10+ */
   background: linear-gradient(to bottom, $color1 $percent1, $color2 $percent2, $color3 $percent3, $color4 $percent4, $color5 $percent5); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='"'+ $color1 +'"', endColorstr='"'+ $color5 +'"', GradientType=0); /* IE6-9 */
+  //filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='"'+ $color1 +'"', endColorstr='"'+ $color5 +'"', GradientType=0); /* IE6-9 */
 }
 
 // Mixin for more complex linear gradients
@@ -31,7 +31,7 @@ $borderRadius10: 10px;
   background: -o-linear-gradient(top, $color1 $percent1, $color2 $percent2, $color3 $percent3, $color4 $percent4, $color5 $percent5, $color6 $percent6, $color7 $percent7, $color8 $percent8); /* Opera 11.10+ */
   background: -ms-linear-gradient(top, $color1 $percent1, $color2 $percent2, $color3 $percent3, $color4 $percent4, $color5 $percent5,  $color6 $percent6, $color7 $percent7, $color8 $percent8); /* IE10+ */
   background: linear-gradient(to bottom, $color1 $percent1, $color2 $percent2, $color3 $percent3, $color4 $percent4, $color5 $percent5,  $color6 $percent6, $color7 $percent7, $color8 $percent8); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='"'+ $color1 +'"', endColorstr='"'+ $color5 +'"', GradientType=0); /* IE6-9 */
+  //filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='"'$color1 +'"', endColorstr='"'+ $color5 +'"', GradientType=0); /* IE6-9 */
 }
 
 
@@ -130,7 +130,7 @@ body {
 }
 
 
-h1, h2, h3, h4{
+h1, h2, h3, h4, h5{
   font-family: Marmelad, sans-serif;
 }
 
@@ -215,6 +215,10 @@ h1, h2, h3, h4{
         rgba(213,206,166,1), 93%, rgba(127,99,0,1), 100%, rgba(124,114,78,1), 100%);
       a {
         color: #000000 !important;
+        font-size: 1.4em;
+        text-align: left;
+        padding: 7px 0 13px 35%;
+        font-family: Marmelad, sans-serif;
       }
     }
 
@@ -356,6 +360,9 @@ h1, h2, h3, h4{
         @include linGradient(rgba(238, 238, 238, 1), 0%, rgba(238, 238, 238, 1), 3%, #dedede, 14%, rgba(204, 204, 204, 1), 88%, rgba(204, 204, 204, 1), 100%);
         a {
           color: #000000 !important;
+          font-size: 1.1em;
+          text-align: center;
+          padding: 15px 10px;
         }
       }
 
