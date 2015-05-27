@@ -34,7 +34,7 @@ module.exports = function (grunt) {
         tasks: ['wiredep']
       },
       js: {
-        files: ['<%= yeoman.app %>/scripts/{,*/}*.js'],
+        files: ['<%= yeoman.app %>/pages/{,*/}*.js'],
         tasks: ['newer:jshint:all'],
         options: {
           livereload: '<%= connect.options.livereload %>'
@@ -122,7 +122,7 @@ module.exports = function (grunt) {
       all: {
         src: [
           'Gruntfile.js',
-          '<%= yeoman.app %>/scripts/{,*/}*.js'
+          '<%= yeoman.app %>/pages/{,*/}*.js'
         ]
       },
       test: {
@@ -155,7 +155,7 @@ module.exports = function (grunt) {
       },
       server: {
         options: {
-          map: true,
+          map: true
         },
         files: [{
           expand: true,
@@ -202,7 +202,7 @@ module.exports = function (grunt) {
     filerev: {
       dist: {
         src: [
-          '<%= yeoman.dist %>/scripts/{,*/}*.js',
+          '<%= yeoman.dist %>/pages/{,*/}*.js',
           '<%= yeoman.dist %>/styles/{,*/}*.css',
           '<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
           '<%= yeoman.dist %>/styles/fonts/*'
@@ -246,27 +246,27 @@ module.exports = function (grunt) {
     // By default, your `index.html`'s <!-- Usemin block --> will take care of
     // minification. These next options are pre-configured if you do not wish
     // to use the Usemin blocks.
-    // cssmin: {
-    //   dist: {
-    //     files: {
-    //       '<%= yeoman.dist %>/styles/rol.css': [
-    //         '.tmp/styles/{,*/}*.css'
-    //       ]
-    //     }
-    //   }
-    // },
-    // uglify: {
-    //   dist: {
-    //     files: {
-    //       '<%= yeoman.dist %>/scripts/scripts.js': [
-    //         '<%= yeoman.dist %>/scripts/scripts.js'
-    //       ]
-    //     }
-    //   }
-    // },
-    // concat: {
-    //   dist: {}
-    // },
+     cssmin: {
+       dist: {
+         files: {
+           '<%= yeoman.dist %>/styles/rolStyles.css': [
+             '.tmp/styles/rolStyles.css'
+           ]
+         }
+       }
+     },
+     uglify: {
+       dist: {
+         files: {
+           '<%= yeoman.dist %>/scripts/scripts.js': [
+             '<%= yeoman.dist %>/pages/pages.js'
+           ]
+         }
+       }
+     },
+     concat: {
+       dist: {}
+     },
 
     imagemin: {
       dist: {
@@ -314,9 +314,9 @@ module.exports = function (grunt) {
       dist: {
         files: [{
           expand: true,
-          cwd: '.tmp/concat/scripts',
+          cwd: '.tmp/concat/pages',
           src: '*.js',
-          dest: '.tmp/concat/scripts'
+          dest: '.tmp/concat/pages'
         }]
       }
     },
@@ -359,8 +359,8 @@ module.exports = function (grunt) {
       styles: {
         expand: true,
         cwd: '<%= yeoman.app %>/styles',
-        dest: '.tmp/styles/',
-        src: '{,*/}*.css'
+        dest: '<%= yeoman.dist %>/styles',
+        src: 'devStyles.css'
       }
     },
 
@@ -436,8 +436,8 @@ module.exports = function (grunt) {
   ]);
 
   grunt.registerTask('default', [
-    'newer:jshint',
-    'test',
+    //'newer:jshint',
+    //'test',
     'build'
   ]);
 };
