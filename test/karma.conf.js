@@ -38,7 +38,7 @@ module.exports = function(config) {
       'bower_components/highcharts-release/modules/exporting.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
-      "app/scripts/**/*.js",
+      "../app/pages/**/*.js",
       "test/mock/**/*.js",
       "test/spec/**/*.js"
     ],
