@@ -3,39 +3,57 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/.gitignore" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/.jshintrc" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/.tmp/styles/rol.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/.tmp/styles/rolStyles.css" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Gruntfile.js" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/scripts/app.js" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/scripts/controllers/about.js" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/scripts/controllers/contact.js" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/scripts/controllers/home.js" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/scripts/controllers/skills.js" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/scripts/controllers/skillsdemo.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/pages/app.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/pages/mainPages/about/about-app.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/pages/mainPages/about/about-controller.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/pages/mainPages/about/about.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/pages/mainPages/about/aboutCarousel.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/pages/mainPages/about/directives/carouselAbout-directive.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/pages/mainPages/about/services/carouselData-service.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/pages/mainPages/about/services/greensockFromTo-service.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/pages/mainPages/contact/contact-app.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/pages/mainPages/contact/contact-controller.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/pages/mainPages/contact/contact.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/pages/mainPages/home/directives/activeLinkToggle-directive.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/pages/mainPages/home/home-app.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/pages/mainPages/home/home-controller.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/pages/mainPages/home/home.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/pages/mainPages/home/services/greensockTo-service.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/pages/mainPages/mainPages-app.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/pages/mainPages/projects/projects-controller.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/pages/mainPages/projects/projects.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/pages/mainPages/sideNav.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/pages/mainPages/skills/demos/demos-app.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/pages/mainPages/skills/demos/directives/barChart-directive.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/pages/mainPages/skills/demos/directives/histogram-directive.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/pages/mainPages/skills/demos/directives/lineGraph-directive.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/pages/mainPages/skills/demos/directives/pieChart-directive.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/pages/mainPages/skills/demos/graphs/barChart.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/pages/mainPages/skills/demos/graphs/histogram.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/pages/mainPages/skills/demos/graphs/lineGraph.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/pages/mainPages/skills/demos/graphs/pieChart.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/pages/mainPages/skills/demos/skillsDemos.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/pages/mainPages/skills/demos/skillsdemo-controller.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/pages/mainPages/skills/skills-app.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/pages/mainPages/skills/skills-controller.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/pages/mainPages/skills/skills.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/pages/mainPages/verticalNav.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/styles/_about.scss" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/styles/_contact.scss" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/styles/_global.scss" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/styles/_home.scss" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/styles/_projects.scss" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/styles/_skills.scss" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/styles/devStyles.css" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/styles/main.scss" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/styles/style.css" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/views/about.html" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/views/aboutCarousel.html" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/views/contact.html" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/views/graphs/barChart.html" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/views/graphs/histogram.html" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/views/graphs/lineGraph.html" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/views/graphs/pieChart.html" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/views/home.html" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/views/projects.html" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/views/sideNav.html" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/views/skills.html" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/views/skillsDemos.html" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/views/verticalNav.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/bower.json" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bower_components/angular-ui-router/src/state.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/bower_components/angular/angular.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/bower_components/bootstrap/dist/css/bootstrap.min.css" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/bower_components/highcharts.com/bower.json" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dist/views/skillsDemos.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/package.json" charset="UTF-8" />
   </component>
 </project>
