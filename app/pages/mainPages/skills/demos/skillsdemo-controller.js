@@ -10,8 +10,8 @@
 angular.module('skills.demos', [])
   .controller('SkillsdemoCtrl', function ($scope, $stateParams, limitToFilter){
     $scope.id = $stateParams.id;
-    $scope.issue = {
-      status: $stateParams.id
+    $scope.graph = {
+      type: $stateParams.id
     };
 
     $scope.ideas = [
