@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>Roland's Portfolio</title>
-    <meta name="description" content="">
+    <meta name="keywords" content="front-end, developer, portfolio, skills">
+    <meta name="description" content="Online presentation of skills, and mastered technologies by the Web Developer Roland Oben">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
@@ -11,9 +12,10 @@
     <link rel='stylesheet' href='bower_components/bootstrap/dist/css/bootstrap.css' />
     <!-- endbower -->
     <!-- endbuild -->
-     <!--build:css(.tmp) styles/rol.css-->
-    <link rel="stylesheet" href="styles/rol.css">
+     <!--build:css(.tmp) styles/rolStyles.css-->
+    <!--<link rel="stylesheet" href="styles/rolStyles.css">-->
     <!-- endbuild -->
+    <link rel="stylesheet" href="styles/devStyles.css">
     <!-- Google fonts CDN -->
     <link href='http://fonts.googleapis.com/css?family=Petit+Formal+Script|Josefin+Slab:400,700|Marmelad|Marvel:400,700italic' rel='stylesheet' type='text/css'>
   </head>
@@ -96,7 +98,7 @@
        ga('send', 'pageview');
     </script>
 
-    <!-- build:js(.) scripts/vendor.js -->
+    <!-- build:js(.) pages/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
@@ -116,15 +118,28 @@
     <!-- endbuild -->
 
 
-    <!-- build:js({.tmp,app}) scripts/scripts.js -->
-    <script src="scripts/heartcode-canvasloader-min-0.9.1.js"></script>
-    <script src="scripts/app.js"></script>
-    <script src="scripts/controllers/home.js"></script>
-    <script src="scripts/controllers/about.js"></script>
-    <script src="scripts/controllers/skills.js"></script>
-    <script src="scripts/controllers/projects.js"></script>
-    <script src="scripts/controllers/skillsdemo.js"></script>
-    <script src="scripts/controllers/contact.js"></script>
+    <!-- build:js({.tmp,app}) pages/pages.js -->
+    <script src="pages/heartcode-canvasloader-min-0.9.1.js"></script>
+    <script src="pages/app.js"></script>
+    <script src="pages/mainPages/home/home-controller.js"></script>
+    <script src="pages/mainPages/home/services/greensockTo-service.js"></script>
+    <script src="pages/mainPages/about/about-controller.js"></script>
+    <script src="pages/mainPages/about/directives/carouselAbout-directive.js"></script>
+    <script src="pages/mainPages/about/services/carouselData-service.js"></script>
+    <script src="pages/mainPages/about/services/greensockFromTo-service.js"></script>
+    <script src="pages/mainPages/skills/skills-controller.js"></script>
+    <script src="pages/mainPages/skills/demos/skillsdemo-controller.js"></script>
+    <script src="pages/mainPages/skills/demos/directives/barChart-directive.js"></script>
+    <script src="pages/mainPages/skills/demos/directives/histogram-directive.js"></script>
+    <script src="pages/mainPages/skills/demos/directives/lineGraph-directive.js"></script>
+    <script src="pages/mainPages/skills/demos/directives/pieChart-directive.js"></script>
+    <script src="pages/mainPages/projects/projects-controller.js"></script>
+    <script src="pages/mainPages/contact/contact-controller.js"></script>
+    <script src="pages/thirdParties/css3-mediaqueries.js"></script>
+    <!-- custom modules -->
+
+    <script src="pages/mainPages/mainPages-app.js"></script>
+    <!-- custom modules end -->
     <script type="text/javascript">
       var cl = new CanvasLoader('loading');
       cl.setColor('#7f6300'); // default is '#000000'

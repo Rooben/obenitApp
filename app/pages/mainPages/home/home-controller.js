@@ -15,11 +15,11 @@ angular.module('mainPages.home', [])
         url: '/',
         views: {
           '@': {
-            templateUrl: 'mainPages/home/home.html',
+            templateUrl: 'pages/mainPages/home/home.html',
             controller: 'HomeCtrl'
           },
           'siteRoot@': { //This means, display these in the ui-view in index.html(no name after the @), called siteRoot
-            templateUrl: 'mainPages/sideNav.html'
+            templateUrl: 'pages/mainPages/sideNav.html'
           }
         }
       });

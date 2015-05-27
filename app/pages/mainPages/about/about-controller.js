@@ -15,11 +15,11 @@ angular.module('mainPages.about', [])
         url: '/about',
         views: {
           '@': {
-            templateUrl: 'mainPages/about/about.html',
+            templateUrl: 'pages/mainPages/about/about.html',
             controller: 'AboutCtrl'
           },
           'siteRoot@': {
-            templateUrl: 'mainPages/sideNav.html'
+            templateUrl: 'pages/mainPages/sideNav.html'
           }
         }
       });

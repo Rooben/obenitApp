@@ -23,8 +23,6 @@ angular
     $urlRouterProvider.otherwise('/');
   })
 
-
-
   //This controller enables the active nav button to be toggled based on the route. Needs a root controller since the navs are at the root level.
   .controller('RootCtrl', ['$scope', '$location', function ($scope, $location) {
 
@@ -74,7 +72,6 @@ angular
           break;
         }
       };
-
     });
 
     /* Control of the main nav in the mobile devices*/
@@ -143,4 +140,16 @@ angular
       //Close the main menu, if opened
       $scope.clearMenu();
     };
-  }]);
+  }])
+
+  .directive('activeTog', function(){
+    return{
+      restrict: 'A',
+      link: function(scope, elm){
+        elm.children('li').on('click', function(){
+          elm.children('li').removeClass('active');
+          $(this).addClass('active');
+        });
+      }
+    };
+  });

@@ -15,11 +15,11 @@ angular.module('mainPages.contact', [])
         url: '/contact',
         views: {
           '@': {
-            templateUrl: 'mainPages/contact/contact.html',
+            templateUrl: 'pages/mainPages/contact/contact.html',
             controller: 'ContactCtrl'
           },
           'siteRoot@': {
-            templateUrl: 'mainPages/sideNav.html'
+            templateUrl: 'pages/mainPages/sideNav.html'
           }
         }
       })
