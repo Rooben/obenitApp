@@ -20,8 +20,8 @@
   "smarttabs": true,
   "globals": {
     "angular": false,
-    "s": false,
+    "$": false,
     "TweenLite": false,
-    "sine": false
+    "Sine": false
   }
 }
