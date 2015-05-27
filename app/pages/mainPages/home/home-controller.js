@@ -7,7 +7,23 @@
  * # HomeCtrl
  * Controller of the rolandApp
  */
-angular.module('rolandApp')
+angular.module('mainPages.home', [])
+  .config(function($stateProvider) {
+    $stateProvider
+      // HOME STATES  ===============================
+      .state('home', {
+        url: '/',
+        views: {
+          '@': {
+            templateUrl: 'mainPages/home/home.html',
+            controller: 'HomeCtrl'
+          },
+          'siteRoot@': { //This means, display these in the ui-view in index.html(no name after the @), called siteRoot
+            templateUrl: 'mainPages/sideNav.html'
+          }
+        }
+      });
+  })
   .controller('HomeCtrl', function ($scope, $interval, myGsapTo) {
     var count = 0;
     var finalFontSize;
@@ -41,24 +57,5 @@ angular.module('rolandApp')
       $('.webtext').find('li').css('fontSize', '0.2em');
     }
     runTask();
-  })
-
-  .directive('activeTog', function(){
-    return{
-      restrict: 'A',
-      link: function(scope, elm){
-        elm.children('li').on('click', function(){
-          elm.children('li').removeClass('active');
-          $(this).addClass('active');
-        });
-      }
-    };
-  })
-
-  .factory('myGsapTo', function(){
-    return{
-      runAnimation: function(animationTarget, duration, properties){
-        TweenLite.to(animationTarget, duration, properties);
-      }
-    };
   });
+

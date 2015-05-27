@@ -16,98 +16,11 @@ angular
     'ngResource',
     'ngSanitize',
     'ngTouch',
-    'ui.router'
+    'ui.router',
+    'rolandApp.mainPages'
   ])
   .config(function($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('/');
-    $stateProvider
-      // HOME STATES  ===============================
-      .state('home', {
-        url: '/',
-        views: {
-          '@': {
-            templateUrl: 'views/home.html',
-            controller: 'HomeCtrl'
-          },
-          'siteRoot@': { //This means, display these in the ui-view in index.html(no name after the @), called siteRoot
-            templateUrl: '../views/sideNav.html'
-          }
-        }
-      })
-
-      // ABOUT STATE  =================================
-      .state('about', {
-        url: '/about',
-        views: {
-          '@': {
-            templateUrl: 'views/about.html',
-            controller: 'AboutCtrl'
-          },
-          'siteRoot@': {
-            templateUrl: '../views/sideNav.html'
-          }
-        }
-      })
-
-      // SKILLS PAGE =================================
-      .state('skills', {
-        url: '/skills',
-        views: {
-          '@': {//This means, display these in the ui-view without a name (no name before the @), in index.html(no name after the @).
-            templateUrl: 'views/skills.html',
-            controller: 'SkillsCtrl'
-          },
-          'siteRoot@': {
-            templateUrl: '../views/verticalNav.html',
-            controller: 'RootCtrl'
-          }
-        }
-      })
-
-      .state('skills.list', {
-        url: '/list',
-        templateUrl: '../views/verticalNav.html',
-        controller: 'RootCtrl'
-      })
-
-      .state('skills.demos', {
-        url: '/:id',
-        views: {
-          '@': {
-            templateUrl: 'views/skillsDemos.html',
-            controller: 'SkillsdemoCtrl'
-          }
-        }
-      })
-
-
-    // Projects PAGE =================================
-      .state('projects', {
-        url: '/projects',
-        views: {
-          '@': {
-            templateUrl: 'views/projects.html',
-            controller: 'ProjectsCtrl'
-          },
-          'siteRoot@': {
-            templateUrl: '../views/sideNav.html'
-          }
-        }
-      })
-
-      // Contact PAGE =================================
-      .state('contact', {
-        url: '/contact',
-        views: {
-          '@': {
-            templateUrl: 'views/contact.html',
-            controller: 'ContactCtrl'
-          },
-          'siteRoot@': {
-            templateUrl: '../views/sideNav.html'
-          }
-        }
-      });
   })
 
 
@@ -160,7 +73,7 @@ angular
           case -90: window.location.reload();
           break;
         }
-      }
+      };
 
     });
 

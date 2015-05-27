@@ -7,7 +7,7 @@
  * # skillsdemoCtrl
  * Controller of the rolandApp
  */
-angular.module('rolandApp')
+angular.module('skills.demos', [])
   .controller('SkillsdemoCtrl', function ($scope, $stateParams, limitToFilter){
     $scope.id = $stateParams.id;
     $scope.issue = {
